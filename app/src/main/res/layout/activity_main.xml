@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/main_screen_main_layout_padding"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayoutStart"
+        android:src="@drawable/img_main_page"
+        android:contentDescription="@string/image"/>
+    <FrameLayout
+        android:id="@+id/frameLayoutStart"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/item_color_accent_border_ripple_background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/default_button_text_size"
+            android:textStyle="bold"/>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frameLayoutBMI"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/frameLayoutHistory"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/item_circular_color_accent_background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_button_text_size"
+            android:textStyle="bold"/>
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Calculator"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/frameLayoutBMI"
+        app:layout_constraintStart_toStartOf="@id/frameLayoutBMI"
+        app:layout_constraintTop_toBottomOf="@id/frameLayoutBMI" />
+    <FrameLayout
+        android:id="@+id/frameLayoutHistory"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity = "center"
+        android:gravity = "center"
+        app:layout_constraintStart_toEndOf="@id/frameLayoutBMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/item_circular_color_accent_background">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_calendar"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="History"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/default_button_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/frameLayoutHistory"
+        app:layout_constraintStart_toStartOf="@+id/frameLayoutHistory"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayoutHistory"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
