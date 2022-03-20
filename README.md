@@ -13,5 +13,5 @@ Press the START button, then it shows the upcoming exercise and the countdown to
 ![start workout](https://github.com/ConnorWuProjects/7-Minutes-Work-out/blob/master/Screenshots%20of%207%20Minutes%20Workout/start%20workout.png?raw=true)  
 
 ![end](https://github.com/ConnorWuProjects/7-Minutes-Work-out/blob/master/Screenshots%20of%207%20Minutes%20Workout/end.png?raw=true)    
-After you complete all exercises, the time will be recorded in history.  
+After you complete all exercises, the time will be recorded in the history.  
 
